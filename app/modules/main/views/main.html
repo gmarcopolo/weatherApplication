@@ -1,0 +1,17 @@
+<div layout="column" flex layout-fill>
+	<div>
+		<span class="btn addCityBtn" ng-click="addCity()">
+	        <ng-md-icon icon="add_circle" size="20"></ng-md-icon>
+	        <span translate>MAIN.ADD_CITY</span>
+		</span>
+	</div>
+	<div class="tableWrapper">
+		<div ui-grid="gridOptions" class="grid" ui-grid-resize-columns ui-grid-selection></div>
+	</div>
+	<nvd3 	options="line.options" 
+	     	data="line.data"
+			config="{refreshDataOnly: true, 
+			deepWatchConfig: false, deepWatchOptions: false}"
+			api="api">
+	</nvd3>
+</div>

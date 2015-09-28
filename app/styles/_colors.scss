@@ -1,0 +1,27 @@
+$primary-brand-color: #ef4135;
+$secondary-brand-color: #0054a4;
+$tertiary-brand-color: #fff;
+$background-primary: #fff;
+$secondary-brand-dark: darken($secondary-brand-color, 22);
+
+
+@function set-contrast-color($color) {
+    @if (lightness( $color ) > 60) {
+      @return darken($background-primary, 80); 
+    }
+    @else {
+      @return lighten($background-primary, 20); // Darker color, return white
+    }
+}
+
+$text-brand-navbar: set-contrast-color($primary-brand-color);
+$text-menu-navbar: set-contrast-color($secondary-brand-dark);
+
+$text-color: set-contrast-color($background-primary);
+$border-color: darken($background-primary, 20);
+
+/*BACKGROUNDS*/
+$background-login: desaturate(lighten($secondary-brand-color, 48), 4);
+$background-shortcut-primary: darken(saturate(adjust_hue($primary-brand-color, 23), 10), 8);
+$background-shortcut-secondary: darken(saturate(adjust_hue($primary-brand-color, 132), 10), 24);
+$background-shortcut-tertiary: saturate(lighten(adjust_hue($primary-brand-color, 204), 4), 14);

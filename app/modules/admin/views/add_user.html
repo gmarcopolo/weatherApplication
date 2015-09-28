@@ -1,0 +1,13 @@
+<div class="modal-header">
+  <h3 class="modal-title"> <span class="icon-notification2 text-danger"> </span> <span translate>ADD_USER.ADD_USER</span></h3>
+</div>
+<div class="modal-body" >
+	
+    <input class="form-control inputLogin" placeholder="{{'ADD_USER.USER' | translate }}" ng-model="newUser.name">
+    <br>
+    <input class="form-control inputLogin" placeholder="{{'ADD_USER.USER_NAME' | translate }}" ng-model="newUser.userName">
+</div>
+<div class="modal-footer">
+  <button class="btn btn-danger" ng-click="confirm()" ng-disabled="newUser.name =='' || newUser.userName ==''" translate>ADD_USER.OK</button>
+  <button class="btn btn-default" ng-click="cancel()" ng-disabled="newUser.name =='' || newUser.userName ==''" translate>ADD_USER.CANCEL</button>
+</div>

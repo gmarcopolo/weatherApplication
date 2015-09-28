@@ -1,0 +1,18 @@
+<div class="loginWrapper" >
+	<div flex="33" layout="row" layout-align="center center">
+		<form ng-submit="login(credentials)" name="loginForm" novalidate>
+			<input type="text" class="form-control inputLogin" placeholder="{{'LOGIN.USERNAME' | translate }}" ng-model="credentials.username" autofocus required>
+
+			<input type="password" class="form-control inputLogin" placeholder="{{'LOGIN.PASSWORD' | translate }}" ng-model="credentials.password" required>
+
+			<button type="submit" class="btn btn-primary btn-block" ng-disabled="loginForm.$invalid">
+				<span translate>LOGIN.BUTTON_LOGIN</span>
+			</button>
+		</form>
+	</div>
+	<div layout="row" layout-align="center end">
+		<a class="loginOption" ng-click="createAccountRedirect()" translate>LOGIN.CREATE_ACCOUNT</a>
+		
+		<a class="loginOption" ng-click="forgetPasswordRedirect()" translate>LOGIN.FORGET_PASSWORD</a>
+	</div>
+</div>
